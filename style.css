@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: rgb(255, 255, 255);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg,#7c3aed,#06b6d4);
+}
+
+.profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(5, 2, 24);
+  margin: 10px auto;
+}
+
+.status {
+  color: lime;
+  font-weight: bold;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(63, 57, 192, 0.05);
+}
+.profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(255, 255, 255);
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+a {
+  color: rgb(36, 155, 155);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.cv-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 10px;
+  background: #22c55e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #22c55e;
+}
+ .cert-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.cert-img:hover {
+  transform: scale(1.05);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+.card a {
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
