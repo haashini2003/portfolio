@@ -1,45 +1,89 @@
 console.log("Portfolio Loaded 🚀");
 
-// Page load confirmation
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("All sections loaded successfully ✔");
+/* SCROLL REVEAL ANIMATION */
+
+const hiddenElements = document.querySelectorAll(".hidden");
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+  });
+
 });
 
-// CONTACT FORM → SEND EMAIL
-function sendMail(event) {
-  event.preventDefault();
+hiddenElements.forEach((el) => observer.observe(el));
 
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let message = document.getElementById("message").value.trim();
+/* ACTIVE NAV LINK */
 
-  // Basic validation
-  if (name === "" || email === "" || message === "") {
-    alert("⚠ Please fill all fields before sending!");
-    return;
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach((section) => {
+
+    const sectionTop = section.offsetTop;
+
+    if(pageYOffset >= sectionTop - 200){
+
+      current = section.getAttribute("id");
+
+    }
+
+  });
+
+  navLinks.forEach((link) => {
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href").includes(current)){
+
+      link.classList.add("active");
+
+    }
+
+  });
+
+});
+
+/* CONTACT FORM */
+
+const sendBtn = document.querySelector(".send-btn");
+
+sendBtn.addEventListener("click", () => {
+
+  const name = document.querySelector("input").value;
+  const email = document.querySelector("input[type='email']").value;
+  const message = document.querySelector("textarea").value;
+
+  if(name === "" || email === "" || message === ""){
+
+    alert("Please fill all fields!");
+
+  }else{
+
+    alert("Message Sent Successfully 🚀");
+
   }
 
-  // Email format check (simple)
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    alert("⚠ Please enter a valid email!");
-    return;
+});
+ 
+
+emailjs.send(
+  "service_oucubnx",
+  "template_zhupb7l",
+  {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
   }
-
-  // Mail content
-  let mailtoLink = `mailto:aashihashini111@gmail.com
-?subject=Portfolio Contact from ${encodeURIComponent(name)}
-&body=Name: ${encodeURIComponent(name)}%0A
-Email: ${encodeURIComponent(email)}%0A
-Message: ${encodeURIComponent(message)}`;
-
-  // Open mail app
-  window.location.href = mailtoLink;
-
-  // Clear form after send
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
-
-  alert("✅ Message ready to send via email client!");
-}
+)

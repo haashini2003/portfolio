@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gugashini Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav>
+
+  <h2>Portfolio</h2>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</nav>
 
 <!-- HERO -->
 <header class="hero">
 
   <p class="status">🟢 Available for Work</p>
 
-  <img src="./assets/profile.jpeg" alt="Profile Image" class="profile">
+  <img src="assets/profile.jpeg"
+       alt="Gugashini Profile"
+       class="profile-img">
 
   <h1>Gugashini Sathyamoorthi</h1>
 
-  <h2>Network Engineer | Front End Developer</h2>
+  <h3>Network Engineer | Front End Developer</h3>
 
-  <p class="intro">
-    I am a Computer Networks undergraduate passionate about FrontEnd development and networking.
+  <p class="hero-text">
+    Computer Networks undergraduate passionate about networking,
+    frontend development, and full-stack technologies.
+    Seeking internship opportunities to grow in the IT industry.
   </p>
 
   <!-- BUTTONS -->
   <div class="buttons">
 
-    <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+    <a href="#projects" class="btn1">
       View Projects
-    </button>
+    </a>
 
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <a href="#contact" class="btn2">
       Contact Me
-    </button>
-
-    <!-- DOWNLOAD CV -->
-    <a href="./assets/Gugashini_CV.pdf" download class="cv-btn">
-      Download CV
     </a>
 
   </div>
@@ -45,161 +63,371 @@
 </header>
 
 <!-- ABOUT -->
-<section class="section">
+<section id="about" class="hidden">
+
   <h2>About Me</h2>
 
-  <p>
-    I am a Computer Networks undergraduate with strong interest in networking and FrontEnd development.
-    I enjoy building efficient and user-friendly applications using modern web technologies.
-  </p>
+  <div class="card">
 
-  <p>
-    I am a quick learner seeking an internship to apply my skills in real-world projects and grow my IT career.
-  </p>
+    <p>
+      I am a Computer Networks undergraduate with strong interest
+      in networking and full-stack development.
+      I enjoy building efficient and user-friendly applications
+      using modern technologies.
+    </p>
+
+    <br>
+
+    <p>
+      I am currently improving my technical skills through
+      academic and personal projects while seeking internship
+      opportunities to apply my knowledge in real-world environments.
+    </p>
+
+  </div>
+
 </section>
 
 <!-- EDUCATION -->
-<section class="section">
+<section id="education" class="hidden">
+
   <h2>Education</h2>
 
-  <div class="card">BSc (Hons) Computer Networks - NSBM Green University</div>
-  <div class="card">Diploma in Psychology - ISTS (IVETA)</div>
-  <div class="card">G.C.E Advanced Level - B/ Passara Tamil Maha Vidyalayam</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>BSc (Hons) Computer Networks</h3>
+      <p>NSBM Green University</p>
+      <p>2025 – Present</p>
+    </div>
+
+    <div class="card">
+      <h3>Diploma in Psychology</h3>
+      <p>ISTS (IVETA)</p>
+      <p>2023</p>
+    </div>
+
+    <div class="card">
+      <h3>G.C.E Advanced Level</h3>
+      <p>B/ Passara Tamil Maha Vidyalayam</p>
+      <p>2022</p>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
-  <h2>Projects</h2>
+<section id="projects" class="hidden">
+
+  <h2>Featured Projects</h2>
 
   <div class="grid">
 
+    <!-- PROJECT -->
     <div class="card">
+
       <h3>Stall Booking System</h3>
-      <a href="https://github.com/haashini2003/StallBookingSystem.git" target="_blank">
-        🔗 View Project
+
+      <p>
+        Secure stall booking platform with authentication,
+        role-based access, booking management,
+        and responsive user interface.
+      </p>
+
+      <a href="https://github.com/haashini2003/StallBookingSystem.git"
+         target="_blank"
+         class="project-btn">
+         View Project
       </a>
+
     </div>
 
+    <!-- PROJECT -->
     <div class="card">
-      <h3>Ignite Project</h3>
-      <a href="https://github.com/dhanu2004847-ux/ignite.git" target="_blank">
-        🔗 View Project
+
+      <h3>Campus Connect Lost & Found</h3>
+
+      <p>
+        Smart lost & found management system developed using
+        Java, Spring Boot, H2 Database, and Thymeleaf.
+      </p>
+
+      <a href="https://github.com/"
+         target="_blank"
+         class="project-btn">
+         View Project
       </a>
+
     </div>
 
+    <!-- PROJECT -->
     <div class="card">
+
       <h3>StudentHub</h3>
-      <a href="https://github.com/haashini2003/studenthub.git" target="_blank">
-        🔗 View Project
+
+      <p>
+        Student management platform for academic resources,
+        announcements, dashboard management,
+        and notifications.
+      </p>
+
+      <a href="https://github.com/haashini2003/studenthub.git"
+         target="_blank"
+         class="project-btn">
+         View Project
       </a>
+
     </div>
 
+    <!-- PROJECT -->
     <div class="card">
+
       <h3>Navora Food Mapping</h3>
-      <a href="https://github.com/haashini2003/Navora-Food-Mapping.git" target="_blank">
-        🔗 View Project
+
+      <p>
+        Full-stack travel and food mapping system using
+        Java Spring Boot, MySQL, and JavaScript
+        with location filtering.
+      </p>
+
+      <a href="https://github.com/haashini2003/Navora-Food-Mapping.git"
+         target="_blank"
+         class="project-btn">
+         View Project
       </a>
+
     </div>
 
+    <!-- PROJECT -->
     <div class="card">
+
       <h3>ReLoop</h3>
-      <a href="https://github.com/haashini2003/Reloop.git" target="_blank">
-        🔗 View Project
+
+      <p>
+        Sustainability platform for reusable item sharing
+        using React, Spring Boot, JWT authentication,
+        and MySQL.
+      </p>
+
+      <a href="https://github.com/haashini2003/Reloop.git"
+         target="_blank"
+         class="project-btn">
+         View Project
       </a>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- SKILLS -->
-<section class="section">
+<section id="skills" class="hidden">
+
   <h2>Technical Skills</h2>
 
   <div class="grid">
-    <div class="card">Networking (LAN, WAN, TCP/IP)</div>
-    <div class="card">Java / JavaScript / Python</div>
-    <div class="card">React / Node.js / Express</div>
-    <div class="card">Spring Boot / REST API</div>
-    <div class="card">MongoDB / MySQL</div>
-    <div class="card">Git / GitHub / Postman</div>
+
+    <div class="card">
+      Networking (LAN, WAN, TCP/IP)
+    </div>
+
+    <div class="card">
+      Routers & Switches Basics
+    </div>
+
+    <div class="card">
+      Java / JavaScript / Python
+    </div>
+
+    <div class="card">
+      React / Node.js / Express
+    </div>
+
+    <div class="card">
+      Spring Boot / REST API
+    </div>
+
+    <div class="card">
+      MongoDB / MySQL
+    </div>
+
+    <div class="card">
+      GitHub / Postman / IntelliJ
+    </div>
+
+    <div class="card">
+      JWT Authentication / Axios API
+    </div>
+
   </div>
+
 </section>
 
-<!-- CERTIFICATES (FIXED CLEAN VERSION) -->
-<section class="section" id="certificates">
-  <h2>Certificates</h2>
+<!-- CERTIFICATES -->
+<section id="certificates" class="hidden">
 
-  <div class="card">
-    <a href="https://api2.sololearn.com/v2/certificates/CC-FDCSVA54/image/png?t=639081610839719650"
-       target="_blank">
-      Introduction to C Certificate
-    </a>
+  <h2>Certificates & Awards</h2>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>Introduction to C</h3>
+
+      <p>Cisco Networking Academy</p>
+
+      <a href="https://www.netacad.com/"
+         target="_blank"
+         class="project-btn">
+         View Certificate
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Networking Basics</h3>
+
+      <p>Cisco Networking Academy</p>
+
+      <a href="https://www.netacad.com/"
+         target="_blank"
+         class="project-btn">
+         View Certificate
+      </a>
+
+
+    </div>
+
+    <div class="card">
+
+      <h3>Career Preparation Workshop</h3>
+
+      <p>Participant Award</p>
+      <a href="https://www.credly.com/badges/0e8d0282-1cc0-46f6-9d56-597427bb3560"
+          target="blank"
+          class="project-btn">
+          view certificate</a>
+
+    </div>
+
   </div>
 
-  <div class="card">
-    <a href="https://www.netacad.com/profile?tab=badges#"
-       target="_blank">
-      Networking Basics Certificate (Cisco NetAcad)
-    </a>
+</section>
+
+<!-- LANGUAGES -->
+<section class="hidden">
+
+  <h2>Languages</h2>
+
+  <div class="grid">
+
+    <div class="card">Tamil</div>
+    <div class="card">English</div>
+    <div class="card">Sinhala</div>
+
   </div>
 
 </section>
 
 <!-- EXTRACURRICULAR -->
-<section class="section">
+<section class="hidden">
+
   <h2>Extra-Curricular Activities</h2>
 
-  <div class="card">
-    Participated in essay writing, cultural programs, and sports activities.
-  </div>
-</section>
-
-<!-- LANGUAGES -->
-<section class="section">
-  <h2>Languages</h2>
-
   <div class="grid">
-    <div class="card">Tamil</div>
-    <div class="card">English</div>
-    <div class="card">Sinhala</div>
+
+    <div class="card">
+      Essay writing, poem writing,
+      and story writing competitions.
+    </div>
+
+    <div class="card">
+      Literary and cultural programs.
+    </div>
+
+    <div class="card">
+      Sports activities and achievements.
+    </div>
+
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Contact</h2>
+<section id="contact" class="hidden">
 
-  <div class="card">
-    📧 Email:
-    <a href="mailto:aashihashini111@gmail.com">aashihashini111@gmail.com</a>
+  <h2>Get In Touch</h2>
+
+  <p class="contact-text">
+    I am currently seeking internship opportunities and
+    real-world project experience.
+    Feel free to contact me anytime.
+  </p>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form">
+
+    <input type="text"
+           placeholder="Your Name">
+
+    <input type="email"
+           placeholder="Your Email">
+
+    <textarea placeholder="Your Message"></textarea>
+
+    <button class="send-btn">
+      ✈ Send Message
+    </button>
+
   </div>
 
-  <div class="card">
-    📞 Phone:
-    <a href="tel:+94741648587">+94 74 164 8587</a>
-  </div>
+  <!-- CONTACT LINKS -->
+  <div class="contact-links">
 
-  <div class="card">
-    💻 GitHub:
-    <a href="https://github.com/haashini2003" target="_blank">
-      github.com/haashini2003
+    <a href="mailto:aashihashini111@gmail.com">
+      📧 Email
     </a>
-  </div>
 
-  <div class="card">
-    🔗 LinkedIn:
-    <a href="https://linkedin.com/in/aashi11" target="_blank">
-      linkedin.com/in/aashi11
+    <a href="tel:+94741648587">
+      📞 Phone
     </a>
+
+    <a href="https://github.com/haashini2003"
+       target="_blank">
+       💻 GitHub
+    </a>
+
+    <a href="https://linkedin.com/in/aashi11"
+       target="_blank">
+       🔗 LinkedIn
+    </a>
+
+    
+    <!-- VIEW CV -->
+    <a href="assets/Gugashini_CV.pdf.pdf"
+       target="_blank">
+       📄 View CV
+    </a>
+
+    <!-- DOWNLOAD CV -->
+    <a href="assets/Gugashini_CV.pdf.pdf"
+       download>
+       ⬇ Download CV
+    </a>
+
   </div>
 
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Gugashini Portfolio</p>
+  © 2026 Gugashini Portfolio
 </footer>
 
-<script src="./app.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
